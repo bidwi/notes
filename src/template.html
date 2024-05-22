@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header-component></header-component>
+
+    <div class="grid-container">
+      <form id="noteForm">
+        <div class="form-group">
+          <label for="title">Judul</label> <br />
+          <br />
+          <input
+            type="text"
+            placeholder="Laskar"
+            id="title"
+            name="title"
+            required
+            autocomplete="off"
+            aria-describedby="titleValidation"
+            minlength="6"
+          />
+          <br />
+          <p
+            id="titleValidation"
+            class="validation-message"
+            aria-live="polite"
+          ></p>
+          <br />
+        </div>
+
+        <div class="form-group">
+          <label for="body">Deskripsi</label> <br />
+          <br />
+          <textarea
+            type="text"
+            placeholder="Anak.."
+            id="body"
+            name="body"
+            required
+            autocomplete="off"
+            aria-describedby="bodyValidation"
+            pattern="^(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$"
+            minlength="6"
+          ></textarea>
+          <br />
+          <p
+            id="bodyValidation"
+            class="validation-message"
+            aria-live="polite"
+          ></p>
+          <br />
+        </div>
+
+        <div class="form-group">
+          <label for="createdAt">Tanggal Dibuat</label> <br />
+          <br />
+          <input
+            type="date"
+            id="createdAt"
+            name="createdAt"
+            required
+            autocomplete="off"
+            aria-describedby="createdAtValidation"
+            pattern="^(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$"
+            minlength="6"
+          />
+          <br />
+          <p
+            id="createdAtValidation"
+            class="validation-message"
+            aria-live="polite"
+          ></p>
+          <br />
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn-kirim">Kirim</button>
+        </div>
+      </form>
+      <button-component isClicked="belum"></button-component>
+    </div>
+
+    <footer-component></footer-component>
+  </body>
+</html>
