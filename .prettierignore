@@ -1,1 +1,3 @@
 # Ignore artifacts:
+docs/index.html
+docs/bundle.js
